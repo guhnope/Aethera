@@ -2,12 +2,13 @@ name: Build QuickBlue
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:
+  workflow_dispatch:  # Manual trigger button in Actions tab
 
 jobs:
   build:
-    uses: ublue-os/bluebuild/.github/workflows/reusable-build.yml@main
+    uses: blue-build/github-action@v1  # ← Updated to new BlueBuild org/action
     with:
-      image-name: "ghcr.io/guhnope/qsblue"
-      sign-image: false        # ← change to true later when you want real signing
-    secrets: inherit
+      recipe: recipe.yml  # Your main recipe file
+      image-name: ghcr.io/guhnope/qsblue  # Outputs to GHCR
+      sign-image: false  # Disable signing for now (avoids your secret issues)
+    secrets: inherit  # Uses your existing GPG_PRIVATE_KEY / GPG_PASSPHRASE if enabled later
