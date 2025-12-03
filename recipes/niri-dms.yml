@@ -1,4 +1,4 @@
-name: qsblue-niri-dms
+name: dankblue-niri
 image-version: 43
 base-image: ghcr.io/ublue-os/base-main
 modules:
@@ -39,8 +39,6 @@ modules:
   - type: files
     files:
       - source: niri
-        destination: /etc    
-      - source: dms
         destination: /etc
       - source: users
         destination: /usr/lib/systemd/user/
@@ -52,4 +50,4 @@ modules:
   - type: script
     scripts:
       - dms-skel.sh
-description: "QuickBlue - Niri + DankMaterialShell + DMS Greeter + Brave dev setup"
+description: "Niri + DankMaterialShell in an Atomic Desktop"
