@@ -9,6 +9,7 @@ modules:
         - avengemedia/dms
         - avengemedia/danklinux
         - ublue-os/packages
+  - type: rpm-ostree        
     install:
       - niri
       - alacritty
