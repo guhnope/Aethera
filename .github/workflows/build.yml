@@ -6,9 +6,16 @@ on:
 
 jobs:
   build:
-    uses: blue-build/github-action@v1  # ← Updated to new BlueBuild org/action
-    with:
-      recipe: recipe.yml  # Your main recipe file
-      image-name: ghcr.io/guhnope/qsblue  # Outputs to GHCR
-      sign-image: false  # Disable signing for now (avoids your secret issues)
-    secrets: inherit  # Uses your existing GPG_PRIVATE_KEY / GPG_PASSPHRASE if enabled later
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Custom Image
+        uses: blue-build/github-action@v1  # ← Corrected: This is a composite action
+        with:
+          recipe: recipe.yml  # Your main recipe file (adjust if in a subdir like recipes/)
+          cosign_private_key: ${{ secrets.SIGNING_SECRET }}  # Optional: For signing (skip for now)
+          registry_token: ${{ secrets.GITHUB_TOKEN }}
