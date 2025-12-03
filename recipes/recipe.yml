@@ -6,16 +6,16 @@ image-version: 43
 base-image: ghcr.io/ublue-os/silverblue-main
 
 modules:
-  - name: copr-repos
-    type: copr
+    type: dnf
     repos:
-      - avengemedia/dms
-      - avengemedia/danklinux\
-      - ublue-os/packages
+      copr:
+        - avengemedia/dms
+        - avengemedia/danklinux
+        - ublue-os/packages
 
-  - type: rpm-ostree
     install:
       - niri
+      - alacritty
       - xwayland-satellite
       - greetd
       - greetd-tuigreet   # keep for fallback, your DMS greeter will override
@@ -46,24 +46,13 @@ modules:
       - gnome-tour
       - yelp
 
-  - type: files
+    type: files
     files:
       - source: system_files
         destination: /
 
 
-  - type: script
-    scripts:
-      - 01-dms-and-flatpaks.sh: |
-          #!/bin/bash
-          set -euo pipefail
-
-          # Add Flathub
-          flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
-
-
-  - type: systemd
+    type: systemd
     enabled:
       - greetd.service
 
