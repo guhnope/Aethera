@@ -37,11 +37,16 @@ modules:
       - mpv
       - nemo
       - mousepad
-      - qt6ct
-      - qt5ct
+      - brave-browser
+      - code
+
     remove:
       - firefox
       - firefox-langpacks
+      - gnome-keyring
+      - gnome-online-accounts-libs
+      - desktop-backgrounds-gnome 
+      - f43-backgrounds-gnome 
   - type: files
     files:
       - source: niri
