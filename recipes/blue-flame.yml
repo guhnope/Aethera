@@ -56,6 +56,7 @@ modules:
   - type: script
     scripts:
       - dms-skel.sh
+      - greetd-users.sh
 
 description: "Niri + DankMaterialShell in an Atomic Desktop"
 
