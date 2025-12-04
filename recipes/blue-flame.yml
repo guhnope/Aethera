@@ -42,7 +42,6 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
-      - gnome-keyring
       - gnome-online-accounts-libs
   - type: files
     files:
