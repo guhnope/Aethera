@@ -26,6 +26,7 @@ modules:
       - qt6-qtwayland
       - fish
       - qt6ct
+      - qt5ct
       - wl-clipboard
       - network-manager-applet
       - quickshell
@@ -41,12 +42,24 @@ modules:
       - nemo
       - mousepad
       - brave-browser
-      - code
     remove:
       - firefox
       - firefox-langpacks
       - vim-minimal  
-      - vim-enhanced       
+      - vim-enhanced
+  - type: default-flatpaks
+    notify: true  # Shows a notification when installing flatpaks
+    system:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub"
+      install:
+        - com.google.Chrome
+        - com.slack.Slack
+        - md.obsidian.Obsidian
+        - com.visualstudio.code
+        - org.libreoffice.LibreOffice
+        - com.spotify.Client      
   - type: files
     files:
       - source: niri

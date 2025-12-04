@@ -15,7 +15,7 @@ jobs:
       - name: Build BlueCandle image
         uses: blue-build/github-action@v1  # ← Corrected: This is a composite action
         with:
-          recipe: blue-flame.yml  # Your main recipe file (adjust if in a subdir like recipes/)
+          recipe: blue-candle.yml  # Your main recipe file (adjust if in a subdir like recipes/)
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}  # Optional: For signing (skip for now)
           registry_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build BlueMango Image
