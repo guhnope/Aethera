@@ -52,21 +52,6 @@ modules:
   - type: script
     scripts:
       - dms-skel.sh
-  - type: defualt-flatpaks
-    configurations:
-      - scope: user
-        repo:
-          title: Flathub (user)
-      - notify: true    
-        scope: system
-        repo:
-          title: Flathub (System)
-        install:
-          - io.podman_desktop.PodmanDesktop
-          - com.brave.Browser
-          - com.visualstudio.code
-          - org.signal.Signal
-          - com.slack.Slack
 
 description: "Niri + DankMaterialShell in an Atomic Desktop"
 
