@@ -55,7 +55,7 @@ modules:
     system:
       enabled:
         - greetd
-        - firewallds
+        - firewalld
   - type: script
     scripts:
       - dms-skel.sh
