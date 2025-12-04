@@ -61,7 +61,6 @@ modules:
       - gnome-keyring
       - fuzzel
       - waybar
-      - gnome-online-accounts-libs
   - type: script
     scripts:
       - dms-skel.sh
