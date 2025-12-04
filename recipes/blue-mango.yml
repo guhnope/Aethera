@@ -1,56 +1,52 @@
-name: dankblue-niri
+name: bluemango
 image-version: 43
 base-image: ghcr.io/ublue-os/base-main
 modules:
   - type: dnf
     repos:
       copr:
+        - dennemann/mangowc
         - avengemedia/dms
         - avengemedia/danklinux
         - ublue-os/packages
   - type: rpm-ostree        
     install:
-      - niri
+      - quickshell  
+      - dms
+      - dms-greeter
+      - mangowc
+      - scenefx        
+      - adw-gtk3-theme
       - alacritty
-      - xwayland-satellite
       - greetd
       - greetd-tuigreet
       - greetd-selinux
       - qt6-qtwayland
-      - xdg-desktop-portal-gnome
       - wl-clipboard
       - network-manager-applet
-      - quickshell
       - matugen
       - material-symbols-fonts
-      - dms
-      - dms-greeter
       - wlsunset
       - cliphist
       - imv
       - mpv
       - nemo
       - mousepad
-      - qt6ct
-      - qt5ct
     remove:
       - firefox
-      - firefox-langpacks
+      - firefox-langpacks      
   - type: files
     files:
-      - source: niri
+      - source: hypr
         destination: /
       - source: users
-        destination: /usr/lib/systemd/user/
+        destination: /usr/lib/systemd/user/        
+  - type: script
+    scripts:
+      - dms-skel.sh
   - type: systemd
     system:
       enabled:
         - greetd
         - firewalld
-  - type: script
-    scripts:
-      - dms-skel.sh
-
-description: "Niri + DankMaterialShell in an Atomic Desktop"
-
-
+description: "MangoWC + DankMaterialShell in an Atomic Desktop"
