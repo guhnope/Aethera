@@ -34,6 +34,7 @@ modules:
       - cliphist
       - imv
       - nemo
+      - mpv
     remove:
       - firefox
       - firefox-langpacks
@@ -54,7 +55,6 @@ modules:
           - com.visualstudio.code
           - org.libreoffice.LibreOffice
           - com.spotify.Client
-          - io.mpv.mpv
           - org.xfce.mousepad          
   - type: files
     files:
