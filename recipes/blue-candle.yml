@@ -43,7 +43,6 @@ modules:
       - firefox-langpacks
       - vim-minimal  
       - vim-enhanced
-      - libreoffice      
   - type: default-flatpaks
     configurations:
       - scope: system
@@ -75,6 +74,7 @@ modules:
       - gnome-keyring
       - fuzzel
       - waybar
+      - libreoffice      
   - type: script
     scripts:
       - dms-skel.sh
