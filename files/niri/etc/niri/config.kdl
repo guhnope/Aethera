@@ -366,6 +366,12 @@ binds {
     //
     // Most actions that you can bind here can also be invoked programmatically with
     // `niri msg action do-something`.
+  Mod+B hotkey-overlay-title="Google Chrome" {
+     spawn "flatpak" "run" "com.google.Chrome";
+  }
+  Mod+E hotkey-overlay-title="File Browser" {
+     spawn "caja";
+  }  
   Mod+Space hotkey-overlay-title="Application Launcher" {
      spawn "dms" "ipc" "call" "spotlight" "toggle";   
    }
@@ -419,7 +425,6 @@ binds {
    Mod+Shift+N allow-when-locked=true {
       spawn "dms" "ipc" "call" "night" "toggle";
    }
-
 
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
