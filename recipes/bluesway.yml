@@ -1,11 +1,10 @@
-name: BlueMango
+name: BlueSway
 image-version: 43
 base-image: ghcr.io/ublue-os/base-main
 modules:
   - type: dnf
     repos:
       copr:
-        - dennemann/MangoWC
         - avengemedia/dms
         - avengemedia/danklinux
         - ublue-os/packages
@@ -14,8 +13,11 @@ modules:
       - quickshell  
       - dms
       - dms-greeter
-      - mangowc
-      - scenefx
+      - sway
+      - grim
+      - slurp
+      - mako
+      - swayidle
       - adw-gtk3-theme
       - alacritty
       - greetd
@@ -24,9 +26,12 @@ modules:
       - qt6-qtwayland
       - wl-clipboard
       - mate-polkit      
+      - xdg-desktop-portal-gtk
       - network-manager-applet
       - matugen
       - material-symbols-fonts
+      - pavucontrol
+      - brightnessctl
       - wlsunset
       - cliphist
       - imv
@@ -36,6 +41,7 @@ modules:
       - mousepad
       - engrampa
       - paperwork
+      - blueman
       - mpv
     remove:
       - firefox
@@ -58,7 +64,7 @@ modules:
           - com.spotify.Client
   - type: files
     files:
-      - source: mango
+      - source: sway
         destination: /
       - source: system
         destination: /     
@@ -73,4 +79,4 @@ modules:
       - greetd-users.sh
       - neovim.sh
       - misc.sh
-description: "MangoWC + DankMaterialShell in an Atomic Desktop"
+description: "Sway + DankMaterialShell in an Atomic Desktop"
