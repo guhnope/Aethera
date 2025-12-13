@@ -81,5 +81,3 @@ modules:
       - misc.sh
 
 description: "Niri + DankMaterialShell in an Atomic Desktop"
-
-

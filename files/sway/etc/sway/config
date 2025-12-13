@@ -52,7 +52,6 @@ input type:touchpad {
     left_handed disabled
     middle_emulation enabled
     accel_profile adaptive
-    accel_speed 0.0
 }
 
 # --- Autostart Applications (from autostart.sh) ---
