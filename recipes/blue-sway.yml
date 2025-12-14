@@ -64,6 +64,8 @@ modules:
           - com.spotify.Client
   - type: files
     files:
+      - source: system
+        destination: /      
       - source: sway
         destination: /
       - source: dms

@@ -59,6 +59,8 @@ modules:
           - com.spotify.Client        
   - type: files
     files:
+      - source: system
+        destination: /      
       - source: niri
         destination: /
       - source: dms
