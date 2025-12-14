@@ -81,6 +81,7 @@ bindsym XF86AudioMicMute dms ipc call audio micmute
 bindsym XF86AudioPlay dms ipc call mpris playPause
 bindsym XF86AudioNext dms ipc call mpris next
 bindsym XF86AudioPrev dms ipc call mpris previous
+bindsym XF86AudioStop dms ipc call mpris stop
 
 # Brightness
 bindsym XF86MonBrightnessUp dms ipc call brightness increment 5

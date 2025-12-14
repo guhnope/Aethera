@@ -417,6 +417,9 @@ binds {
    XF86AudioPlay allow-when-locked=true {
       spawn "dms" "ipc" "call" "mpris" "playPause";
    }
+   XF86AudioStop allow-when-locked=true {
+      spawn "dms" "ipc" "call" "mpris" "stop";
+   }
    XF86AudioNext allow-when-locked=true {
       spawn "dms" "ipc" "call" "mpris" "next";
    }
