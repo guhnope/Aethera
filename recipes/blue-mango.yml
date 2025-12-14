@@ -60,7 +60,7 @@ modules:
     files:
       - source: mango
         destination: /
-      - source: system
+      - source: dms
         destination: /     
   - type: systemd
     system:

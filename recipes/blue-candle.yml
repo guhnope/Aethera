@@ -61,7 +61,7 @@ modules:
     files:
       - source: niri
         destination: /
-      - source: system
+      - source: dms
         destination: / 
   - type: systemd
     system:
