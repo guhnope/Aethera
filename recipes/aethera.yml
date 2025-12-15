@@ -37,11 +37,9 @@ modules:
       - mousepad
       - engrampa
       - paperwork
-      - ublue-os-just
       - ublue-os-udev-rules
       - ublue-os-media-automount-udev
       - ublue-os-luks 
-      - ublue-os-media-automount-udev 
       - mpv
     remove:
       - firefox
