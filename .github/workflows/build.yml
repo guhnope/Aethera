@@ -12,7 +12,7 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
-      - name: Build BlueCandle image
+      - name: Build Aethera image
         uses: blue-build/github-action@v1 
         with:
           recipe: aethera.yml  #
