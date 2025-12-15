@@ -42,7 +42,6 @@ modules:
       - firefox-langpacks
       - vim-minimal  
       - vim-enhanced
-      - just
   - type: default-flatpaks
     configurations:
       - scope: system
