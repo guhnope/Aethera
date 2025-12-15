@@ -1,0 +1,47 @@
+name: Build Installer ISO
+
+on:
+  workflow_dispatch: # Allows you to manually trigger the build from the Actions tab
+  push:
+    tags:
+      - 'v*' # Automatically build when you push a tag like "v1.0"
+
+jobs:
+  build-iso:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read # Required to pull your container image
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 1. Build the ISO
+      - name: Build ISO with bootc-image-builder
+        uses: ublue-os/bootc-image-builder-action@v1
+        with:
+          # Your image URL
+          image: ghcr.io/guhnope/aethera:latest
+          # The type of ISO to generate
+          type: anaconda-iso
+          fedora-version: 43
+
+      # 2. Upload as Artifact (For testing)
+      # You can download this from the Actions tab immediately
+      - name: Upload ISO Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: aethera-installer-iso
+          path: ./*.iso
+          if-no-files-found: error
+          retention-days: 5
+
+      # 3. (Optional) Create a GitHub Release
+      - name: Release ISO
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: ./*.iso
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
