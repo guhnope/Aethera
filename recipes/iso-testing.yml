@@ -19,9 +19,6 @@ modules:
       - fish
       - wl-clipboard
       - network-manager-applet
-      - quickshell
-      - matugen
-      - material-symbols-fonts
       - adw-gtk3-theme 
       - wlsunset
       - neovim
@@ -71,7 +68,6 @@ modules:
       - waybar
   - type: script
     scripts:
-      - dms-skel.sh
       - greetd-users.sh
       - neovim.sh
       - misc.sh
