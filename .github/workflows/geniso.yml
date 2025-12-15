@@ -37,7 +37,7 @@ jobs:
           mkksiso --ks kickstart.ks --cmdline "inst.lang=en_US.UTF-8 inst.env=LC_ALL=en_US.UTF-8" base.iso aethera-interactive.iso
 
       - name: Upload ISO
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: aethera-interactive
           path: aethera-interactive.iso
