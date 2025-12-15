@@ -19,7 +19,7 @@ jobs:
 
       - name: Download Fedora 43 Net-Installer
         run: |
-          wget -O base.iso https://download.fedoraproject.org/pub/fedora/linux/releases/43/Server/x86_64/iso/Fedora-Server-netinst-x86_64-43-1.2.iso
+          wget -O base.iso https://mirror.aarnet.edu.au/pub/fedora/linux/releases/43/Server/x86_64/iso/Fedora-Server-netinst-x86_64-43-1.6.iso
 
       - name: Create Interactive Kickstart
         run: |
