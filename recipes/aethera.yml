@@ -11,6 +11,7 @@ modules:
       copr:
         - avengemedia/dms
         - avengemedia/danklinux
+        - yalter/niri
   - type: rpm-ostree 
     install:
       - niri
