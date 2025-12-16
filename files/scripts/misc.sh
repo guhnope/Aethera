@@ -5,4 +5,4 @@ QUALIFIED_KERNEL="$(rpm -qa | grep -P 'kernel-(\d+\.\d+\.\d+)' | sed -E 's/kerne
 chmod 0600 "/lib/modules/$QUALIFIED_KERNEL/initramfs.img"
 
 # Remove just doc file
-rm -rf /usr/share/doc/just
+rm -rf /usr/share/doc /usr/share/man /usr/share/info
