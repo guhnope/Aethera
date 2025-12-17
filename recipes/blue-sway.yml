@@ -69,7 +69,7 @@ modules:
       - source: sway
         destination: /
       - source: dms
-        destination: /     
+        destination: /
   - type: systemd
     system:
       enabled:
@@ -77,8 +77,7 @@ modules:
         - firewalld               
   - type: script
     scripts:
-      - dms-skel.sh
       - greetd-users.sh
       - neovim.sh
-      - misc.sh
+      - initramfs.sh
 description: "Sway + DankMaterialShell in an Atomic Desktop"

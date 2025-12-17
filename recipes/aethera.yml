@@ -78,8 +78,7 @@ modules:
         - firewalld
   - type: script
     scripts:
-      - dms-skel.sh
       - greetd-users.sh
       - neovim.sh
-      - misc.sh
+      - initramfs.sh
 description: "Niri + DankMaterialShell in an Atomic Desktop"
