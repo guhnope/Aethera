@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=Caja File Management
+Comment=Change the behaviour and appearance of file manager windows
+Exec=/usr/bin/caja-file-management-properties
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+Icon=system-file-manager
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GTK;Settings;X-MATE-PersonalSettings;
+NoDisplay=true
+Keywords[zh_TW]=file;manager;change;properties;behaviour;appearance;windows;MATE;
+Keywords=file;manager;change;properties;behaviour;appearance;windows;MATE;
+OnlyShowIn=MATE;
+X-Desktop-File-Install-Version=0.28

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Icon Browser
+NoDisplay=true
+Comment=Inspect GTK Icon Theme
+Categories=GTK;Utility;
+Exec=yad-icon-browser
+Icon=yad
+Terminal=false
+Type=Application
+StartupNotify=true
+X-Desktop-File-Install-Version=0.28
