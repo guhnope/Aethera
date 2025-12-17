@@ -1,3 +1,5 @@
+#!/bin/bash
+set -euo pipefail
 chmod 755 /etc/mango/autostart.sh
 echo "Ensure autostart.sh is executable"
 for u in $(awk -F: '$3 >= 1000 {print $1}' /etc/passwd); do
