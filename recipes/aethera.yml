@@ -7,6 +7,10 @@ modules:
       copr:
         - avengemedia/dms
         - avengemedia/danklinux
+  - type: files
+    files:
+      - source: system
+        destination: /
   - type: rpm-ostree 
     options:
       nodocs: true
