@@ -8,6 +8,8 @@ modules:
         - avengemedia/dms
         - avengemedia/danklinux
   - type: rpm-ostree 
+    options:
+      nodocs: true
     install:
       - niri
       - xwayland-satellite
