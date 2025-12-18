@@ -39,11 +39,11 @@ modules:
       - engrampa
       - paperwork
       - mpv
-    remove:
+    #remove:
       #- firefox
       #- firefox-langpacks
-      - vim-minimal  
-      - vim-enhanced
+      #- vim-minimal  
+      #- vim-enhanced
   - type: files
     files:
       - source: system
