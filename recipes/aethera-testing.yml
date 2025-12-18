@@ -1,4 +1,4 @@
-name: aethera-testing
+name: aethera
 image-version: 43
 base-image: ghcr.io/ublue-os/base-main
 modules:
@@ -13,10 +13,9 @@ modules:
         - avengemedia/danklinux
   - type: rpm-ostree 
     install:
-      - sway
+      - niri
       - xwayland-satellite
-      - xdg-desktop-portal-gtk   
-      - xdg-desktop-portal-gnome  
+      - xdg-desktop-portal-gtk      
       - fish
       - grim
       - slurp
@@ -72,10 +71,6 @@ modules:
         destination: /
       - source: dms
         destination: / 
-  - type: containerfile
-    snippets:
-      - RUN rm -rf /usr/share/doc/niri
-      - RUN rm -rf /usr/share/doc/just 
   - type: systemd
     system:
       enabled:
@@ -83,6 +78,7 @@ modules:
         - firewalld
   - type: script
     scripts:
+      - niri.sh
       - greetd-users.sh
       - neovim.sh
       - initramfs.sh
