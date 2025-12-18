@@ -13,9 +13,10 @@ modules:
         - avengemedia/danklinux
   - type: rpm-ostree 
     install:
-      - niri
-#      - xwayland-satellite
-      - xdg-desktop-portal-gtk      
+      - sway
+      - xwayland-satellite
+      - xdg-desktop-portal-gtk   
+      - xdg-desktop-portal-gnome  
       - fish
       - grim
       - slurp
