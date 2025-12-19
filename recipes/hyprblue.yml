@@ -5,10 +5,12 @@ modules:
   - type: dnf
     repos:
       copr:
+        - ashbuk/Hyprland-Fedora
         - avengemedia/dms
         - avengemedia/danklinux
   - type: rpm-ostree        
     install:
+      - hyprland
       - fish
       - grim
       - slurp
@@ -42,16 +44,6 @@ modules:
       - firefox-langpacks
       - vim-minimal  
       - vim-enhanced
-  - type: dnf
-    repos:
-      copr:
-        - solopasha/hyprland
-  - type: rpm-ostree
-    install:
-      - hyprland
-      - hypridle
-      - xdg-desktop-portal-hyprland
-      - hyprpolkitagent
   - type: default-flatpaks
     configurations:
       - scope: system
