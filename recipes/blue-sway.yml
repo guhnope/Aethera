@@ -20,6 +20,8 @@ modules:
       - dms-greeter
       - adw-gtk3-theme
       - alacritty
+      - brave-browser
+      - code
       - greetd
       - greetd-tuigreet
       - greetd-selinux
@@ -57,10 +59,8 @@ modules:
           name: flathub
           title: Flathub
         install:
-          - com.google.Chrome
           - com.slack.Slack
           - md.obsidian.Obsidian
-          - com.visualstudio.code
           - com.spotify.Client
   - type: files
     files:

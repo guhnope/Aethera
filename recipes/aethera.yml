@@ -3,7 +3,13 @@ image-version: 43
 base-image: ghcr.io/ublue-os/base-main
 modules:
   - type: dnf
-    repos:   
+    repos:
+      files:
+        - brave.repo
+        - vscode.repo
+      keys:
+        - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+        - https://packages.microsoft.com/keys/microsoft.asc
       copr:
         - yalter/niri
         - avengemedia/dms
@@ -21,6 +27,8 @@ modules:
       - dms-greeter
       - adw-gtk3-theme
       - alacritty
+      - brave-browser
+      - code
       - greetd
       - greetd-tuigreet
       - greetd-selinux
@@ -77,9 +85,7 @@ modules:
           name: flathub
           title: Flathub
         install:
-          - com.google.Chrome
           - com.slack.Slack
           - md.obsidian.Obsidian
-          - com.visualstudio.code
           - com.spotify.Client      
 description: "Niri + DankMaterialShell in an Atomic Desktop"
