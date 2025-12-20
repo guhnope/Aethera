@@ -1,0 +1,15 @@
+---
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - avengemedia/dms
+        - avengemedia/danklinux
+  - type: rpm-ostree        
+    install:
+        - quickshell
+        - matugen
+        - material-symbols-fonts
+        - cliphist
+        - dms
+        - dms-greeter

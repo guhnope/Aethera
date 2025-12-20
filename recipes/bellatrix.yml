@@ -1,0 +1,20 @@
+name: bellatrix
+image-version: 43
+base-image: ghcr.io/ublue-os/base-main
+modules:
+  - from-file: common/cosmic-packages.yml
+  - type: files
+    files:
+      - source: system
+        destination: / 
+  - type: systemd
+    system:
+      enabled:
+        - greetd
+        - firewalld
+  - type: script
+    scripts:
+      - neovim.sh
+      - initramfs.sh
+  - from-file: common/flatpak.yml
+description: "A Cosmic uBlue build"

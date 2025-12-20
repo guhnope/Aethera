@@ -9,16 +9,11 @@ modules:
         - dennemann/MangoWC
         - avengemedia/dms
         - avengemedia/danklinux
+  - from-file: common/dms-packages.yml        
   - type: rpm-ostree        
     install:
       - mangowc
-      - scenefx
-      - quickshell
-      - dms
-      - dms-greeter
-      - matugen
-      - material-symbols-fonts
-      - cliphist      
+      - scenefx  
   - type: files
     files:
       - source: system

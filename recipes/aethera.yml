@@ -7,25 +7,16 @@ modules:
     repos:
       copr:
         - yalter/niri
-        - avengemedia/dms
-        - avengemedia/danklinux
   - type: rpm-ostree 
     install:
       - xwayland-satellite
-      - xdg-desktop-portal-gtk      
-      - quickshell
-      - dms
-      - dms-greeter
-      - matugen
-      - material-symbols-fonts
-      - cliphist      
+      - xdg-desktop-portal-gtk
+      - niri
+  - from-file: common/dms-packages.yml              
   - type: files
     files:
       - source: system
         destination: /
-  - type: rpm-ostree 
-    install:
-      - niri
   - type: files
     files:
       - source: niri

@@ -7,21 +7,11 @@ modules:
     repos:
       copr:
         - ashbuk/Hyprland-Fedora
-        - avengemedia/dms
-        - avengemedia/danklinux
-      files:
-        - vscode.repo
-      keys:
-        - https://packages.microsoft.com/keys/microsoft.asc
+  - from-file: common/dms-packages.yml             
   - type: rpm-ostree        
     install:
       - hyprland
-      - quickshell
-      - dms
-      - dms-greeter
-      - matugen
-      - material-symbols-fonts
-      - cliphist      
+  - from-file: common/dms-packages.yml           
   - type: files
     files:
       - source: system
