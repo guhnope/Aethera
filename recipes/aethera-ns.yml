@@ -1,4 +1,4 @@
-name: aethera
+name: aethera-ns
 image-version: 43
 base-image: ghcr.io/ublue-os/base-main
 modules:
