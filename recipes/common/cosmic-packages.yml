@@ -3,7 +3,7 @@ type: rpm-ostree
 install:
     - cosmic-greeter
     - cosmic-session
-    - cosmic-pannel
+    - cosmic-panel
     - cosmic-settings
     - cosmic-wallpapers
     - cosmic-workspaces
